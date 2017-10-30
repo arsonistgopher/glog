@@ -1,7 +1,7 @@
 package useslogging
 
 import (
-	projectlogger "ghost2loggerservice/ghost2loggerd/scratches/logdepinject/logging"
+	"github.com/arsonistgopher/glog"
 )
 
 // DoSomethingF1 returns a doubled up string.
@@ -12,7 +12,7 @@ func DoSomethingF1(message string, l projectlogger.Logger) string {
 
 // DoSomethingT is a type with an embedded logger.
 type DoSomethingT struct {
-	projectlogger.Logger
+	glog.Logger
 	Name string
 }
 

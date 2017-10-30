@@ -2,19 +2,20 @@ package main
 
 import (
 	// This is the project logger (contains interface and embedded type).
-	projectlogger "ghost2loggerservice/ghost2loggerd/scratches/logdepinject/logging"
 	"os"
+
+	"github.com/arsonistgopher/glog"
 
 	// This is the logging library I want to use for Ghost2logger.
 	coreoslog "github.com/coreos/go-log/log"
 
 	// Test package to show usage.
-	useslogging "ghost2loggerservice/ghost2loggerd/scratches/logdepinject/useslogging"
+	useslogging "github.com/arsonistgopher/glog/examples/useslogging"
 )
 
 func main() {
 	// Create new `logger` from projectlogger and give it a name.
-	logger := projectlogger.Logger{Name: "Ghost2logger"}
+	logger := glog.Logger{Name: "Ghost2logger"}
 
 	// This logger is created using the coreos go-log New() function.
 	// The type returned by coreoslog.New implements the interface in projectlogger.
