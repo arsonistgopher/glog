@@ -4,8 +4,8 @@ import (
 	"github.com/arsonistgopher/glog"
 )
 
-// DoSomethingF1 returns a doubled up string.
-func DoSomethingF1(message string, l projectlogger.Logger) string {
+// DoSomethingF1 returns a string.
+func DoSomethingF1(message string, l glog.Logger) string {
 	l.Debug(message)
 	return message
 }
