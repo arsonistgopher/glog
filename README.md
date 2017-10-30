@@ -2,9 +2,10 @@
 Glog: A package to de-couple logging.
 
 This package offers some light de-coupling to logging packages.
-Dave Cheney references this issue in his blog post: []()
 
-Whilst this approach couples you to a logging package, it does not do anything fancy.
+Dave Cheney references the tightly coupled package usage issue in his blog post: [lets-talk-about-logging](https://dave.cheney.net/2015/11/05/lets-talk-about-logging). 
+
+Whilst this approach couples you to a logging type and set of simple methods, it does not do anything fancy and does not lock you to a package.
 
 It offers four methods (Debug/Info/Error/Critical) and does not have any package level vars.
 
@@ -25,3 +26,5 @@ I wrote this because it was a pattern I started to use, so figured instead of re
 My logging is now easier.
 
 Fun fact: *Glog* isn't Go log, it's named after it's creator, David Gee (me)
+
+Second fun fact: No global vars.
