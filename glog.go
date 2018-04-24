@@ -15,7 +15,7 @@ type Logger struct {
 type Logging interface {
 	Info(v ...interface{})
 	Error(v ...interface{})
-	Critical(v ...interface{})
+	// Critical(v ...interface{})
 	Debug(v ...interface{})
 }
 
@@ -38,12 +38,14 @@ func (l Logger) Debug(v ...interface{}) {
 	}
 }
 
+/*
 // Critical method provides users the opportunity to decorate their Critical logs.
 func (l Logger) Critical(v ...interface{}) {
 	for _, msg := range v {
 		l.LoggingBase.Critical(msg)
 	}
 }
+*/
 
 // Error method provides users the opportunity to decorate their Error logs.
 func (l Logger) Error(v ...interface{}) {
